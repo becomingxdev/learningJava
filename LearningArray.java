@@ -44,13 +44,14 @@
 
 
 
-public class Arrays {
+import java.util.Arrays;
+public class LearningArray {
     public static void main(String[] args) {
         int[] orgNumbersArr = {25, 10, 45, 5, 15};
         
         //searching for 15 using linear search
         int target = 15;
-        boolean found = false;   //by default boolean is false
+        boolean found = false;
         int foundIndex = -1;
         for (int i = 0; i < orgNumbersArr.length; i++) {
             if (orgNumbersArr[i] == target) {
@@ -64,5 +65,20 @@ public class Arrays {
         } else {
             System.out.println(target + " was not found.");
         }
+
+        //sorting the array
+        Arrays.sort(orgNumbersArr);
+
+        //printing array
+        System.out.println("Sorted array: " + Arrays.toString(orgNumbersArr));
+
+        //copying array using system method
+        int[] copyNumbersArr = new int[5];
+        System.arraycopy(orgNumbersArr,0, copyNumbersArr,0,5);
+        orgNumbersArr[0] = 99;
+
+        //printing both arrays
+        System.out.println("Original array(after change): " + Arrays.toString(orgNumbersArr));
+        System.out.println("Copied array: " + Arrays.toString(copyNumbersArr));
     }
 }
