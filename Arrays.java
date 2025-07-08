@@ -21,7 +21,7 @@ public class Arrays {
 
         for (int i = 0; i < ticTacToeBoard.length; i++) {
             for (int j = 0; j < ticTacToeBoard.length; j++) {
-                ticTacToeBoard[i][j] = "empty";
+                ticTacToeBoard[i][j] = " ";
             }
         }
 
@@ -36,7 +36,7 @@ public class Arrays {
                 }
             }
             System.out.println();
-            System.out.println("---------------------");
+            System.out.println("---------");
         }
     }
 }
